@@ -19,12 +19,13 @@ No data are visible from nEurothenticate, and access must be gained via a 3rd pa
 
 ### Direct deposit
 
-You can upload data curated using the [Brain Imaging Data Structure](https://bids.neuroimaging.io/), and filling a few additional information, along with a [Data User Agreement](https://open-brain-consent.readthedocs.io/en/stable/gdpr/data_user_agreement.html). It is essential you create a DUA that respect your national regulation. 
+You can upload data curated using the [Brain Imaging Data Structure](https://bids.neuroimaging.io/), and filling a few additional information, along with a [Data User Agreement](https://open-brain-consent.readthedocs.io/en/stable/gdpr/data_user_agreement.html). It is essential you create a DUA that respects your national regulation. 
 
 #### What happen to your data?
 
-Data are checked and pushed to EU restricted Google Cloud.
+Data are checked and pushed to EU restricted Google Cloud along the metadata using a jsonld file using [schema.org](https://schema.org/). Thanks to [DataLad](https://www.datalad.org/) your data are visible and accessible worldwide, providing users are identified within nEurothenticate.
 
 
 ### Third party deposit
 
+Using the same mechanism as above, data can be deposite via the OpenNeuro portal.
