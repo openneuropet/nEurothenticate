@@ -45,7 +45,7 @@ Create a backup vault and give permission at the account level (see below). Crea
 
 By default, data are replicated using geographic pairs, two centres within the same geographic area. Also by default a goegraphic area is an area wit the same data laws.  
 
-Data are always encrypted at rest (Storage Service Encryption SSE) using 256-bit Advanced Encryption Standard (AES). There is an option to use the key vault to use your own encryption. Data can also be encrypted in transit using client-side encrryption, HTTPS or SMB3. Access can be granted using Shared access signature [SAS](https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas).  
+Data are always encrypted at rest (Storage Service Encryption SSE) using 256-bit Advanced Encryption Standard (AES). There is an option to use the key vault to use your own encryption. Data can also be encrypted in transit using client-side encrryption, HTTPS or SMB3. Access can be granted using Shared access signature [SAS](https://learn.microsoft.com/en-us/rest/api/storageservices/create-user-delegation-sas). Interactive Access Management (IAM) is only used for Azure files with active directory.
 
 ### Authorizing requests to storage
 
