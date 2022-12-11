@@ -38,7 +38,7 @@ Files are mostly used for 'active shared directory' and applications migration.
 
 *3. Backup*
 
-Create a back-up vault and give permission at the account level (see below). Create a retention policy and finally configure and enable back up for blobs. Object replication for blobs requires two storage accounts, at least two containers, allows blob versioning and change feed on the source, allow blob versioning on the destination, and configure the onject retention policy.
+Create a backup vault and give permission at the account level (see below). Create a retention policy and finally configure and enable backup for blobs. Object replication for blobs requires two storage accounts, at least two containers, allows blob versioning and change feed on the source, allow blob versioning on the destination, and configure the onject retention policy.
 
 
 ## Security
