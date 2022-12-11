@@ -6,7 +6,7 @@ Storing files for distributed access.
 
 ## Storage
 
-Data replication using RA-GRS read access geo-redondnat storage with copies in EU. RA ensures data can be read from any of the two paired-servers.
+Data replication using RA-GRS read access geo-redondant storage with copies in EU. RA ensures data can be read from any of the two paired-servers.
 
 Every object has a URL e.g. http://mystorageaccount.blob.core.windows.net or http://mystorageaccount.file.core.windows.net
 
@@ -23,7 +23,7 @@ Blob type cannot be changed. The default type is a block blob which bundles file
 *1. uploading data*
 
 There are many options, here are those useful for OpenNeuroPET:
-- AzCopy: CLI for windows and linux for containers and blobs.
+- [AzCopy](https://github.com/Azure/azure-storage-azcopy): CLI for windows, macOS and linux for containers and blobs. 
 - Blobfuse: linux virtual file system.
 
 *2. blobs vs files*
@@ -35,6 +35,10 @@ There are many options, here are those useful for OpenNeuroPET:
 | share across VM            | azuee disk single VM     |
 
 Files are mostly used for 'active shared directory' and applications migration.
+
+*3. Backup*
+
+Create a back-up vault and give permission at the account level (see below). Create a retention policy and finally configure and enable back up for blobs. Object replication for blobs requires two storage accounts, at least two containers, allows blob versioning and change feed on the source, allow blob versioning on the destination, and configure the onject retention policy.
 
 
 ## Security
