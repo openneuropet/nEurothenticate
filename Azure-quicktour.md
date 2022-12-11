@@ -14,11 +14,11 @@ Containers act as folders, all files are stored into blobs. There is an unlimite
 
 Data can be stored as hot, cool or archived - with cost of access vs storage being in opposite directions: hot is cheap access expensive storage, archived is expensive access. The most likely scenario is to use cool storage for most datasets, but it is possible to switch between storage 'tier' at any time. There is also a blob life cycle policy allowing to create rules for storage tier applying rules daily, thus optimizing cost (move anyfiles not touched for 30 days to cool).
 
-### define blobs
+### What are blobs
 
-Blod type cannot be changed. The default type is a block blob which bundles files. Append blob is for logging scenarios, appending stuff. Page blobs are for frequent read/write opperations. Datasets files are thus stored in block blobs. The virtual machine that handles users, SQL, etc .. can be moved from local server to Azure page if/when traffic is high.
+Blob type cannot be changed. The default type is a block blob which bundles files. Append blob is for logging scenarios, appending stuff. Page blobs are for frequent read/write opperations. Datasets files are thus stored in block blobs. The virtual machine that handles users, SQL, etc .. can be moved from local server to Azure page if/when traffic is high.
 
-### how do we deal with data
+### Dealing with data
 
 *1. uploading data*
 
@@ -28,6 +28,11 @@ There are many options, here are those useful for OpenNeuroPET:
 
 *2. blobs, files, queue data*
 
+| files                      |  blobs                    |
+|----------------------------|:-------------------------:|
+| directory objects          |  flat-namespace           |
+| access trhough file shares |  access through container |
+| share across VM            | azuee disk single VM      |
 
 ## Security
 
